@@ -1,0 +1,521 @@
+@font-face {
+    font-family: "Inter";
+    src: url('./fonts/Inter.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url('./fonts/PlayfairDisplay.ttf') format('ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+p,
+body,
+hr,
+h3 {
+    margin: 0;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 120px;
+}
+
+#content:has(#full-menu) {
+    gap: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: #8A857F;
+}
+
+a:hover {
+    color: #6E6A67;
+}
+
+body {
+    background-color: #F7F3EE;
+    color: #2F2A27;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 120px;
+
+    font-variant-numeric: tabular-nums;
+}
+
+nav {
+    height: 92px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #F4EFEA;
+
+    border-bottom: 1px solid #E6DDD5;
+
+    padding: 24px 32px;
+}
+
+.logo {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.nav-btns {
+    display: flex;
+
+    gap: 40px;
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 24px;
+
+    padding: 8px 26px;
+
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    border: 1px solid #C8B6A6;
+}
+
+.nav-btn:focus {
+    background-color: #D8CBBF;
+    border: 1px solid #D8CBBF;
+
+    outline: none;
+    box-shadow: none;
+}
+
+.hero-content,
+.welcome-content,
+.menu-preview-content,
+.menu-content {
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-headline-wrapper,
+.welcome-headline-wrapper {
+    max-width: 760px;
+    text-align: center;
+
+    margin: 0 auto 32px auto;
+}
+
+.hero-headline {
+    font-family: "Playfair Display";
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0;
+}
+
+.hero-supportive-text-wrapper {
+    max-width: 600px;
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.hero-supportive-text {
+    font-family: "Inter";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    color: #6E6A67;
+}
+
+.hero-img-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.hero-img {
+    max-height: 480px;
+}
+
+.img-attribution {
+    font-family: "Inter";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #8A857F;
+
+    align-self: flex-end;
+}
+
+.welcome-headline {
+    font-family: "Playfair Display";
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.welcome-text-wrapper,
+.menu-headline-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    max-width: 680px;
+}
+
+.welcome-text {
+    font-family: "Inter";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #6E6A67;
+}
+
+.menu-preview-content {
+    max-width: 900px;
+    padding: 0 32px 120px 32px;
+}
+
+.menu-preview-headline-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.menu-preview-headline {
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.menu-preview-wrapper {
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 48px;
+}
+
+.menu-item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 30px;
+}
+
+.menu-preview-divider {
+    width: 45%;
+    border-top: 1px solid #D8D0C6;
+    opacity: 0.5;
+}
+
+.menu-item-left {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.item-name {
+    font-family: "Playfair Display";
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.item-description {
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #6E6A67;
+}
+
+.item-price {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+footer {
+    padding: 80px 32px 60px 32px;
+    background-color: #ECE6DF;
+
+    border-top: 1px solid #E2DCD4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.footer-shop-name {
+    font-family: "Playfair Display";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.footer-shop-address {
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #6E665E;
+}
+
+.footer-copyright {
+    font-family: "Inter";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #8A8278;
+}
+
+.menu-headline-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-headline {
+    font-family: "Playfair Display";
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.menu-headline-subtitle {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #6E665E;
+}
+
+.category-title {
+    font-family: "Playfair Display";
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    margin-bottom: 4px;
+}
+
+.full-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 140px;
+}
+
+.category-section-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 56px;
+}
+
+.about-headline-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 24px;
+}
+
+.about-headline {
+    font-family: "Playfair Display";
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.about-headline-subtitle {
+    max-width: 600px;
+
+    font-feature-settings: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #6E665E;
+}
+
+.about-img-text-wrapper {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1000px;
+
+    gap: 80px;
+}
+
+.about-img {
+    max-height: 500px;
+    border-radius: 4px;
+
+    object-fit: cover;
+}
+
+.about-right-section {
+    max-width: 450px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.about-label {
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8A827A;
+}
+
+.about-section-heading {
+    font-family: "Playfair Display";
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.about-section-text {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #6E665E;
+}
+
+.about-philosophy-wrapper {
+    padding: 0 32px;
+    max-width: 680px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 32px;
+}
+
+.about-philosophy-headline {
+    font-family: "Playfair Display";
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.about-philosophy-subtitle {
+    text-align: center;
+
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #6E665E;
+}
+
+@media (max-width: 430px) {
+    body {
+        gap: 80px;
+    }
+
+    #content {
+        width: 100%;
+        gap: 80px;
+        padding: 0 32px;
+    }
+
+    #content:has(#full-menu) {
+        gap: 64px;
+
+        padding: 0 32px;
+    }
+
+    .nav-btns {
+        gap: 0;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-headline-wrapper,
+    .welcome-headline-wrapper {
+        max-width: 100%;
+        margin: 0 auto 24px auto;
+    }
+
+    .hero-headline {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    .hero-img {
+        max-width: 100%;
+        max-height: 420px;
+    }
+
+    .menu-preview-content {
+        max-width: 100%;
+    }
+
+    .menu-preview-wrapper {
+        gap: 28px;
+    }
+
+    .menu-preview-divider {
+        width: 100%;
+    }
+
+    .full-menu-wrapper {
+        gap: 64px;
+    }
+
+    .category-section-wrapper {
+        gap: 24px;
+    }
+
+    .about-img-text-wrapper{
+        flex-direction: column;
+    }
+
+    footer{
+        padding: 40px 0;
+        gap: 12px;
+    }
+}
